@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+$primaryColor : #9356DC;
+$secondaryColor : #FF79DA;
+$tertiaryColor : #99E2D0;
+$darkGreyColor : #eaeaea;
+$lightGreyColor : #f6f6f6;
+
+$fontLogoTitle: 'Shrikhand';
+$fontText: 'Roboto';
+body{
+    width: auto;
+    min-width: 328px;
+    font-family: $fontText;
+}
+header{
+    box-shadow: 0 4px 2px 2px rgb(201, 198, 198);
+}
+h1{
+    font-family: $fontLogoTitle;
+    text-align: center;
+    margin: 4px 0;
+    font-weight: 500;
+}
+.localisation{
+    font-family: $fontText;
+    background-color: $darkGreyColor;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+}
+.localisation div{
+    color: #353535;
+    margin-right: 20px;
+}
+.localisation input{
+    margin-top: 6px;
+    background-color: $darkGreyColor;
+    border: none;
+    height: 30px;
+    &::placeholder {
+        color: #353535;
+        font-weight: 600;
+      }
+      &:focus{
+          outline: none;
+      }
+}
+.search{
+    font-family: $fontText;
+    background-color: $lightGreyColor;
+    display: flex;
+    flex-direction: column;
+}
+.search h2{
+    width: 250px;
+    margin: 25px auto 10px auto;
+    text-align: center;
+}
+.search p{
+    width: 310px;
+    margin: auto;
+    text-align: center;
+    color: rgb(85, 85, 83);
+}
+.btn{
+    font-family: $fontText;
+    background: linear-gradient(0deg,$primaryColor,$secondaryColor);
+    color: white;
+    width: 205px;
+    height: 40px;
+    border: none;
+    margin: 20px auto 40px auto;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow:0 3px 3px rgb(180, 178, 178);
+    &:focus{
+        outline: none;
+    }
+}
+
+article h2{ 
+    width: auto;
+    margin: 35px auto 20px 20px;
+}
+.step1{
+    background-color: $lightGreyColor;
+    width: 310px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 40px auto;
+    cursor: pointer;
+    border-radius: 17px;
+    box-shadow:2px 4px 4px rgb(238, 233, 233);
+    font-weight: 600;
+    position: relative;
+    &:hover{
+        background-color: #f5edff;
+    }
+    &,i{
+        margin-left: 30px;
+        margin-right: 30px;
+        color: gray;
+    }
+    &,p{
+        color: black;
+    }
+    &::before{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        content: '1';
+        background-color: $primaryColor;
+        color: white;
+        font-size: 12px;
+        left:0;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.step2{
+    @extend .step1;
+    &::before{
+        content: '2';
+    }
+}
+.step3{
+    @extend .step1;
+    &::before{
+        content: '3';
+    }
+}
+.section2{
+    background-color: $lightGreyColor;
+    margin-top: 20px;
+}
+.section2 h2{
+    width: auto;
+    padding: 35px 0 20px 20px;
+}
+.card1{
+    width: 310px;
+    height: 280px;
+    align-items: center;
+    display: flex;
+    margin: 20px auto 40px auto;
+    & img{
+        width: 310px;
+        height: 20px;
+    }
+}
