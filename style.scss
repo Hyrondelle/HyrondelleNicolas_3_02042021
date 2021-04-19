@@ -172,6 +172,7 @@ article h2{
         color: black;
     }
 }
+                         /*coeur animé*/
 .heart{  
     position: absolute;
     bottom: 30px;
@@ -216,6 +217,23 @@ article h2{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;  
     } 
+                      /*nouveau vert*/
+    &::after{
+        content:'Nouveau';
+        position: absolute;
+        top: 13px;
+        right: 17px;
+        width: 80px;
+        height: 25px;
+        background-color: #99e2d0;
+        color: #008766;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        font-weight: 500;
+        
+    }
 }
 
 .card:nth-child(2){
@@ -232,6 +250,21 @@ article h2{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px; 
     } 
+    &::after{
+        content:'Nouveau';
+        position: absolute;
+        top: 13px;
+        right: 17px;
+        width: 80px;
+        height: 25px;
+        background-color: #99e2d0;
+        color: #008766;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+        font-weight: 500;
+    }
 }
 .card:nth-child(3){
     .card__img{
@@ -285,3 +318,34 @@ footer li i{
     margin-right: 10px;
 }
 
+@media screen and (min-width: 768px){
+    h2{ 
+        width: auto;
+        margin: 35px auto 20px auto;
+        text-align: center;
+    }
+    .steps{
+        display: flex;
+        margin: 0 5%;
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    } 
+}
+@media screen and (min-width: 1022px){
+    .cards{
+        display: flex;
+        margin: 0 10% 0 10%;   
+    }
+}
+@media screen and (min-width: 1200px){
+    .cards{
+           display: flex;
+           margin: 0;
+    }
+    .card{
+        max-width: 290px;       
+    }
+}
