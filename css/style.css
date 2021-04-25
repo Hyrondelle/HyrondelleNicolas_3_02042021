@@ -13,6 +13,84 @@ body {
   font-family: "Roboto";
 }
 
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  animation: updown 2.5s linear forwards;
+}
+
+.lettre {
+  font-family: "Shrikhand";
+  color: white;
+  font-size: 80px;
+  letter-spacing: 15px;
+  margin-bottom: 100px;
+  animation: flash 3s linear forwards;
+}
+
+@keyframes updown {
+  0% {
+    z-index: 2;
+  }
+  95% {
+    z-index: 2;
+  }
+  100% {
+    z-index: -2;
+  }
+}
+@keyframes flash {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  90% {
+    color: white;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+}
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
 header {
   box-shadow: 0 4px 2px 2px #c9c6c6;
 }
@@ -43,6 +121,7 @@ h1 {
   background-color: #eaeaea;
   border: none;
   height: 30px;
+  cursor: text;
 }
 .localisation input::placeholder {
   color: #353535;
@@ -214,7 +293,7 @@ article h2 {
   /*nouveau vert*/
 }
 .card:nth-child(1) .card__img {
-  background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   width: 100%;
   height: 72%;
   background-size: cover;
@@ -243,7 +322,7 @@ article h2 {
 }
 
 .card:nth-child(2) .card__img {
-  background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   width: 100%;
   height: 72%;
   background-size: cover;
@@ -272,7 +351,7 @@ article h2 {
 }
 
 .card:nth-child(3) .card__img {
-  background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   width: 100%;
   height: 72%;
   background-size: cover;
@@ -286,7 +365,7 @@ article h2 {
 }
 
 .card:nth-child(4) .card__img {
-  background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   width: 100%;
   height: 72%;
   background-size: cover;
@@ -303,6 +382,13 @@ footer {
   margin-top: 40px;
 }
 
+footer p {
+  color: white;
+  font-family: "Shrikhand";
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
 footer ul {
   padding-left: 20px;
   padding-top: 20px;
@@ -316,10 +402,6 @@ footer li {
 
 footer li a {
   color: white;
-}
-
-footer li:nth-child(1) {
-  font-family: "Shrikhand";
 }
 
 footer li i {
@@ -342,6 +424,11 @@ footer li i {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 1022px) {

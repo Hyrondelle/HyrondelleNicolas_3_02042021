@@ -1,0 +1,168 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: auto;
+  min-width: 272px;
+  font-family: "Roboto";
+}
+
+header a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #353535;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+section {
+  background: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+}
+
+main {
+  background-color: white;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  transform: translateY(-22px);
+}
+
+.name {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin-right: 10%;
+  font-weight: 500;
+}
+
+.heart {
+  margin-top: 8px;
+}
+.heart input {
+  position: absolute;
+  left: -9999px;
+}
+.heart label {
+  position: relative;
+  cursor: pointer;
+}
+.heart label::after {
+  content: "";
+  font-family: "fontawesome";
+  color: black;
+  font-size: 1.2em;
+}
+
+.heart input:checked + label::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.heart input:checked + label::after {
+  color: transparent;
+}
+
+.entrees > p {
+  margin: 20px 0 20px 5%;
+  color: #353535;
+  position: relative;
+}
+.entrees > p::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  left: 0;
+  bottom: -8px;
+}
+
+.btn {
+  margin: 0 5% 0 5%;
+  font-family: "Roboto";
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 7px 7px rgba(236, 236, 236, 0.85);
+  box-shadow: 0px 0px 7px 7px rgba(236, 236, 236, 0.85);
+}
+.btn:focus {
+  outline: none;
+}
+
+.btn__texts {
+  margin-left: 7px;
+  text-align: left;
+}
+.btn__texts h3 {
+  margin: 9px 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+}
+.btn__texts p {
+  text-align: left;
+  color: #353535;
+  text-overflow: ellipsis;
+  overflow: visible;
+}
+
+.btn__prix {
+  display: flex;
+  min-width: 50px;
+  justify-content: center;
+  align-self: flex-end;
+  transform: translateX(0);
+  transition: transform 700ms;
+}
+.btn__prix p {
+  font-weight: 600;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+.btn__prix div {
+  background-color: #99E2D0;
+  height: 60px;
+  width: 0;
+  transition: width 500ms;
+  transform-origin: right;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.btn:hover .btn__prix div {
+  width: 55px;
+}
+
+/*# sourceMappingURL=style-menu.css.map */
