@@ -166,6 +166,10 @@ h1 {
 .btn:focus {
   outline: none;
 }
+.btn:hover {
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  box-shadow: 1px 0 11px 4px rgba(180, 178, 178, 0.74);
+}
 
 article h2 {
   width: auto;
@@ -187,6 +191,7 @@ article h2 {
 }
 .step1:hover, .step3:hover, .step2:hover {
   background-color: #f5edff;
+  box-shadow: 1px 4px 6px 4px rgba(238, 233, 233, 0.88);
 }
 .step1, .step3, .step2, .step1 i, .step3 i, .step2 i {
   margin-left: 30px;
@@ -257,6 +262,7 @@ article h2 {
 
 /*coeur animé*/
 .heart {
+  z-index: 1;
   position: absolute;
   bottom: 30px;
   right: 20px;
@@ -274,7 +280,6 @@ article h2 {
   font-family: "fontawesome";
   color: black;
 }
-
 .heart input:checked + label::before {
   position: absolute;
   content: "";
@@ -284,7 +289,6 @@ article h2 {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
-
 .heart input:checked + label::after {
   color: transparent;
 }

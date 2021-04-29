@@ -154,8 +154,11 @@ h1{
     &:focus{
         outline: none;
     }
+    &:hover{
+        background: linear-gradient(45deg,$primaryColor,$secondaryColor);
+        box-shadow:1px 0 11px 4px rgb(180 178 178 / 74%);
+    }
 }
-
 article h2{ 
     width: auto;
     margin: 35px auto 20px 20px;
@@ -174,6 +177,7 @@ article h2{
     position: relative;
     &:hover{
         background-color: #f5edff;
+        box-shadow:1px 4px 6px 4px rgb(238 233 233 / 88%);  
     }
     &,i{
         margin-left: 30px;
@@ -245,6 +249,7 @@ article h2{
 }
                          /*coeur animé*/
 .heart{  
+    z-index: 1;
     position: absolute;
     bottom: 30px;
     right:20px;
@@ -261,18 +266,18 @@ article h2{
             color: black;   
         }    
     }
-}
-.heart input:checked +label::before{
-    position: absolute;
-    content: '\f004';
-    font-family: 'Font Awesome\ 5 Free'; 
-    background: -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($secondaryColor));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-weight: 900;  
-}
-.heart input:checked +label::after{
-    color: transparent;    
+    input:checked +label::before{
+        position: absolute;
+        content: '\f004';
+        font-family: 'Font Awesome\ 5 Free'; 
+        background: -webkit-gradient(linear, left top, left bottom, from($primaryColor), to($secondaryColor));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;  
+    }
+    input:checked +label::after{
+        color: transparent;    
+    }
 }
 .card:nth-child(1){
     .card__img{
@@ -394,7 +399,7 @@ footer li i{
 }
 
 @media screen and (min-width: 768px){
-    h2{ 
+    .index{ 
         width: auto;
         margin: 35px auto 20px auto;
         text-align: center;

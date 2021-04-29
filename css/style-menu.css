@@ -9,6 +9,450 @@
 
 body {
   width: auto;
+  min-width: 328px;
+  font-family: "Roboto";
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  animation: updown 2.5s linear forwards;
+}
+
+.lettre {
+  font-family: "Shrikhand";
+  color: white;
+  font-size: 80px;
+  letter-spacing: 15px;
+  margin-bottom: 100px;
+  animation: flash 3s linear forwards;
+}
+
+@keyframes updown {
+  0% {
+    z-index: 2;
+  }
+  95% {
+    z-index: 2;
+  }
+  100% {
+    z-index: -2;
+  }
+}
+@keyframes flash {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+  90% {
+    color: white;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 7px #FF79DA;
+  }
+}
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+header {
+  box-shadow: 0 4px 2px 2px #c9c6c6;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.localisation {
+  font-family: "Roboto";
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.localisation div {
+  color: #353535;
+  margin-right: 20px;
+}
+
+.localisation input {
+  margin-top: 6px;
+  background-color: #eaeaea;
+  border: none;
+  height: 30px;
+  cursor: text;
+}
+.localisation input::placeholder {
+  color: #353535;
+  font-weight: 600;
+}
+.localisation input:focus {
+  outline: none;
+}
+
+.search {
+  font-family: "Roboto";
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.search h2 {
+  width: 250px;
+  margin: 25px auto 10px auto;
+  text-align: center;
+}
+
+.search p {
+  width: 310px;
+  margin: auto;
+  text-align: center;
+  color: #555553;
+}
+
+.btn {
+  font-family: "Roboto";
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  color: white;
+  width: 205px;
+  height: 40px;
+  border: none;
+  margin: 20px auto 40px auto;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px #b4b2b2;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background: linear-gradient(45deg, #9356DC, #FF79DA);
+  box-shadow: 1px 0 11px 4px rgba(180, 178, 178, 0.74);
+}
+
+article h2 {
+  width: auto;
+  margin: 35px auto 20px 20px;
+}
+
+.step1, .step3, .step2 {
+  background-color: #f6f6f6;
+  width: 310px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto 40px auto;
+  cursor: pointer;
+  border-radius: 17px;
+  box-shadow: 2px 4px 4px #eee9e9;
+  font-weight: 600;
+  position: relative;
+}
+.step1:hover, .step3:hover, .step2:hover {
+  background-color: #f5edff;
+  box-shadow: 1px 4px 6px 4px rgba(238, 233, 233, 0.88);
+}
+.step1, .step3, .step2, .step1 i, .step3 i, .step2 i {
+  margin-left: 30px;
+  margin-right: 30px;
+  color: gray;
+}
+.step1, .step3, .step2, .step1 p, .step3 p, .step2 p {
+  color: black;
+}
+.step1::before, .step3::before, .step2::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  content: "1";
+  background-color: #9356DC;
+  color: white;
+  font-size: 12px;
+  left: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step2::before {
+  content: "2";
+}
+
+.step3::before {
+  content: "3";
+}
+
+.section2 {
+  background-color: #f6f6f6;
+  margin-top: 20px;
+}
+
+.section2 h2 {
+  width: auto;
+  padding: 35px 0 20px 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 335px;
+  height: 252px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  box-shadow: 0 0 4px #b3b0b0;
+  position: relative;
+}
+.card .card__name {
+  margin: 10px 0 10px 10px;
+  font-weight: 700;
+  color: black;
+}
+.card .card__quartier {
+  margin-left: 10px;
+  color: black;
+}
+
+/*coeur animé*/
+.heart {
+  z-index: 1;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+.heart input {
+  position: absolute;
+  left: -9999px;
+}
+.heart label {
+  position: relative;
+  cursor: pointer;
+}
+.heart label::after {
+  content: "";
+  font-family: "fontawesome";
+  color: black;
+}
+.heart input:checked + label::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+.heart input:checked + label::after {
+  color: transparent;
+}
+
+.card:nth-child(1) {
+  /*nouveau vert*/
+}
+.card:nth-child(1) .card__img {
+  background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  width: 100%;
+  height: 72%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card:nth-child(1)::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 13px;
+  right: 17px;
+  width: 80px;
+  height: 25px;
+  background-color: #99e2d0;
+  color: #008766;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  font-weight: 500;
+}
+
+.card:nth-child(2) .card__img {
+  background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  width: 100%;
+  height: 72%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card:nth-child(2)::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 13px;
+  right: 17px;
+  width: 80px;
+  height: 25px;
+  background-color: #99e2d0;
+  color: #008766;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  font-weight: 500;
+}
+
+.card:nth-child(3) .card__img {
+  background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  width: 100%;
+  height: 72%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card:nth-child(4) .card__img {
+  background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  width: 100%;
+  height: 72%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer {
+  background-color: #353535;
+  margin-top: 40px;
+}
+
+footer p {
+  color: white;
+  font-family: "Shrikhand";
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+footer ul {
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer li {
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer li a {
+  color: white;
+}
+
+footer li i {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .index {
+    width: auto;
+    margin: 35px auto 20px auto;
+    text-align: center;
+  }
+
+  .steps {
+    display: flex;
+    margin: 0 5%;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1022px) {
+  .cards {
+    display: flex;
+    margin: 0 10% 0 10%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards {
+    display: flex;
+    margin: 0;
+  }
+
+  .card {
+    max-width: 290px;
+  }
+}
+body {
+  width: auto;
   min-width: 272px;
   font-family: "Roboto";
 }
@@ -42,7 +486,9 @@ main {
 }
 
 .name {
+  min-width: 300px;
   display: flex;
+  position: relative;
   padding-top: 20px;
   justify-content: center;
 }
@@ -55,36 +501,7 @@ h2 {
 }
 
 .heart {
-  margin-top: 8px;
-}
-.heart input {
-  position: absolute;
-  left: -9999px;
-}
-.heart label {
-  position: relative;
-  cursor: pointer;
-}
-.heart label::after {
-  content: "";
-  font-family: "fontawesome";
-  color: black;
-  font-size: 1.2em;
-}
-
-.heart input:checked + label::before {
-  position: absolute;
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  font-size: 1.2em;
-}
-
-.heart input:checked + label::after {
-  color: transparent;
+  margin: -20px 5%;
 }
 
 .entrees > p {
@@ -102,7 +519,7 @@ h2 {
   bottom: -8px;
 }
 
-.btn {
+.btn2 {
   margin: 0 5% 0 5%;
   font-family: "Roboto";
   background: white;
@@ -116,24 +533,24 @@ h2 {
   -webkit-box-shadow: 0px 0px 7px 7px rgba(236, 236, 236, 0.85);
   box-shadow: 0px 0px 7px 7px rgba(236, 236, 236, 0.85);
 }
-.btn:focus {
+.btn2:focus {
   outline: none;
 }
 
-.btn__texts {
+.btn2__texts {
   margin-left: 7px;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.btn__texts h3 {
+.btn2__texts h3 {
   margin: 9px 0 5px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.btn__texts p {
+.btn2__texts p {
   text-align: left;
   color: #353535;
   overflow: hidden;
@@ -141,20 +558,20 @@ h2 {
   white-space: nowrap;
 }
 
-.btn__prix {
+.btn2__prix {
   display: flex;
   min-width: 50px;
   justify-content: center;
   align-self: flex-end;
   transition: transform 700ms;
 }
-.btn__prix p {
+.btn2__prix p {
   font-weight: 600;
   align-self: flex-end;
   margin-bottom: 10px;
   margin-right: 5px;
 }
-.btn__prix div {
+.btn2__prix div {
   position: relative;
   background-color: #99E2D0;
   height: 60px;
@@ -164,24 +581,30 @@ h2 {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
-.btn__prix div::before {
+.btn2__prix div::before {
   font-family: "Font Awesome 5 Free";
-  top: 50%;
-  left: 50%;
+  top: 35%;
+  left: 100%;
   position: absolute;
   content: "";
   background-color: #99E2D0;
   color: white;
-  font-size: 1.5em;
+  font-size: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-10px, -10px);
+  transform: rotate(0);
   font-weight: 900;
+  transition: font-size 0.3s, transform 0.5s, left 0.5s;
 }
 
-.btn:hover .btn__prix div {
+.btn2:hover .btn2__prix div {
   width: 55px;
+}
+.btn2:hover .btn2__prix div::before {
+  font-size: 1.5em;
+  transform: rotate(-360deg);
+  left: 35%;
 }
 
 /*# sourceMappingURL=style-menu.css.map */
