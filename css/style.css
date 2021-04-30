@@ -28,7 +28,7 @@ body {
 .lettre {
   font-family: "Shrikhand";
   color: white;
-  font-size: 80px;
+  font-size: 30px;
   letter-spacing: 15px;
   margin-bottom: 100px;
   animation: flash 3s linear forwards;
@@ -407,6 +407,16 @@ footer li i {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 500px) {
+  .lettre {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .lettre {
+    font-size: 80px;
+  }
+}
 @media screen and (min-width: 768px) {
   .index {
     width: auto;
