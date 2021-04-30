@@ -29,6 +29,7 @@ main{
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
     transform: translateY(-22px);  
+    margin-bottom: -30px;
 }
 .name{
     min-width: 300px;
@@ -156,6 +157,11 @@ h2{
         }  
     }
 }
+.btn-align{
+    padding-top: 20px;
+    display: flex;  
+    
+}
 @media screen and (min-width: 865px){  
    .entreesPlasDesserts{
        display: flex;
@@ -163,7 +169,7 @@ h2{
    }
    .entrees, .plats, .desserts{
     width: 30%;
-}
+   }
 }
 @media screen and (min-width: 1022px){
     

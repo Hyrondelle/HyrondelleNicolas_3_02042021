@@ -28,7 +28,7 @@ body {
 .lettre {
   font-family: "Shrikhand";
   color: white;
-  font-size: 80px;
+  font-size: 30px;
   letter-spacing: 15px;
   margin-bottom: 100px;
   animation: flash 3s linear forwards;
@@ -407,6 +407,16 @@ footer li i {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 500px) {
+  .lettre {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .lettre {
+    font-size: 80px;
+  }
+}
 @media screen and (min-width: 768px) {
   .index {
     width: auto;
@@ -478,6 +488,7 @@ main {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   transform: translateY(-22px);
+  margin-bottom: -30px;
 }
 
 .name {
@@ -605,6 +616,11 @@ h2 {
   font-size: 1.5em;
   transform: rotate(-360deg);
   left: 35%;
+}
+
+.btn-align {
+  padding-top: 20px;
+  display: flex;
 }
 
 @media screen and (min-width: 865px) {
