@@ -385,35 +385,30 @@ footer {
   background-color: #353535;
   margin-top: 40px;
 }
-
 footer p {
   color: white;
   font-family: "Shrikhand";
   padding-left: 20px;
   padding-top: 10px;
 }
-
 footer ul {
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 footer li {
   color: white;
   margin-bottom: 10px;
 }
-
 footer li a {
   color: white;
 }
-
 footer li i {
   margin-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
-  h2 {
+  .index {
     width: auto;
     margin: 35px auto 20px auto;
     text-align: center;

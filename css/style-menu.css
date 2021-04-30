@@ -385,29 +385,24 @@ footer {
   background-color: #353535;
   margin-top: 40px;
 }
-
 footer p {
   color: white;
   font-family: "Shrikhand";
   padding-left: 20px;
   padding-top: 10px;
 }
-
 footer ul {
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 footer li {
   color: white;
   margin-bottom: 10px;
 }
-
 footer li a {
   color: white;
 }
-
 footer li i {
   margin-right: 10px;
 }
@@ -504,12 +499,17 @@ h2 {
   margin: -20px 5%;
 }
 
-.entrees > p {
+.entrees__3, .plats__3, .desserts__3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.entrees > p, .plats > p, .desserts > p {
   margin: 20px 0 20px 5%;
   color: #353535;
   position: relative;
 }
-.entrees > p::before {
+.entrees > p::before, .plats > p::before, .desserts > p::before {
   position: absolute;
   content: "";
   width: 40px;
@@ -520,7 +520,7 @@ h2 {
 }
 
 .btn2 {
-  margin: 0 5% 0 5%;
+  margin: 0 5% 15px 5%;
   font-family: "Roboto";
   background: white;
   display: flex;
@@ -605,6 +605,17 @@ h2 {
   font-size: 1.5em;
   transform: rotate(-360deg);
   left: 35%;
+}
+
+@media screen and (min-width: 865px) {
+  .entreesPlasDesserts {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .entrees, .plats, .desserts {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style-menu.css.map */

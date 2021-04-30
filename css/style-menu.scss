@@ -48,7 +48,11 @@ h2{
     margin: -20px 5%;
     
 }
-.entrees > p{
+.entrees__3, .plats__3, .desserts__3{
+    display: flex;
+    flex-direction: column;
+}
+.entrees > p, .plats > p, .desserts > p{
     margin:20px 0 20px 5%;
     color: #353535;
     position: relative;
@@ -63,7 +67,7 @@ h2{
     }
 }
 .btn2{
-    margin: 0 5% 0 5%;
+    margin: 0 5% 15px 5%;
     font-family: $fontText;
     background: white;
     display: flex;
@@ -151,4 +155,19 @@ h2{
             }
         }  
     }
+}
+@media screen and (min-width: 865px){  
+   .entreesPlasDesserts{
+       display: flex;
+       justify-content: space-evenly;
+   }
+   .entrees, .plats, .desserts{
+    width: 30%;
+}
+}
+@media screen and (min-width: 1022px){
+    
+}
+@media screen and (min-width: 1200px){
+    
 }

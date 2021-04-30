@@ -374,28 +374,27 @@ article h2{
 footer{
     background-color: #353535;
     margin-top: 40px;
-}
-footer p{
-    color: white;
-    font-family: $fontLogoTitle;
-    padding-left: 20px;
-    padding-top: 10px;
-}
-footer ul{
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-footer li{
-    color: white;
-    margin-bottom: 10px;
-}
-footer li a{
-    color: white;
-}
-
-footer li i{
-    margin-right: 10px;
+    p{
+        color: white;
+        font-family: $fontLogoTitle;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    ul{
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    li{
+        color: white;
+        margin-bottom: 10px;
+        a{
+            color: white;
+        }
+        i{
+            margin-right: 10px;
+        }
+    }
 }
 
 @media screen and (min-width: 768px){
