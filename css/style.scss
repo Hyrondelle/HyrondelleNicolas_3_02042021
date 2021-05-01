@@ -203,7 +203,6 @@ article h2{
         justify-content: center;
     }
 }
-
 .step2{
     @extend .step1;
     &::before{
@@ -307,11 +306,9 @@ article h2{
         align-items: center;
         justify-content: center;
         padding: 3px;
-        font-weight: 500;
-        
+        font-weight: 500; 
     }
 }
-
 .card:nth-child(2){
     .card__img{
         background: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');   
