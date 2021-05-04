@@ -26,7 +26,8 @@ body{
     display: flex; 
     justify-content: center;
     align-items: center;
-    z-index: -2;
+    z-index: 2;
+    opacity: 1;
     animation: updown 2.5s linear forwards;
 }
 .lettre {
@@ -39,12 +40,13 @@ body{
 }
 @keyframes updown{
     0%{
-        z-index: 2;
+        opacity: 1;
     }
     95%{
-        z-index: 2;
+        opacity: 1;
     }
     100%{
+        opacity: 0;
         z-index: -2;
     }
 }
@@ -430,6 +432,16 @@ footer{
     }
 }
 @media screen and (min-width: 1200px){
+    .search{
+        height: 300px;
+    }
+    .search p{
+        font-size: 20px;
+    }
+    .steps{
+        display: flex;
+        justify-content: space-evenly;
+    }
     .cards{
            display: flex;
            margin: 0;
