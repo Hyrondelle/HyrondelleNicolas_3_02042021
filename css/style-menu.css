@@ -637,7 +637,7 @@ h2 {
   display: flex;
 }
 
-@media screen and (min-width: 1065px) {
+@media screen and (min-width: 915px) {
   header {
     height: 100px;
     display: flex;
@@ -670,6 +670,7 @@ h2 {
 
   .entrees, .plats, .desserts {
     width: 30%;
+    font-size: 13px;
   }
 
   .name {
@@ -678,6 +679,12 @@ h2 {
     padding-top: 20px;
     justify-content: center;
     margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .entrees, .plats, .desserts {
+    width: 30%;
+    font-size: unset;
   }
 }
 @keyframes apparition {
