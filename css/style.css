@@ -292,9 +292,21 @@ article h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  animation: progress 0.5s;
 }
 .heart input:checked + label::after {
   color: transparent;
+}
+@keyframes progress{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .card:nth-child(1) {
